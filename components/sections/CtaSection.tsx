@@ -12,7 +12,7 @@ export default function CtaSection() {
           </p>
           <div className="cta-actions" data-reveal="fade-up" data-delay="200">
             <a
-              href="https://github.com/"
+              href="https://github.com/PauloHenrrq/PH-Hub"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
