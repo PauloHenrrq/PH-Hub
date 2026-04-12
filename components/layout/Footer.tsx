@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer" id="contato">
+    <footer className="footer" id="repositorio">
       <div className="container footer-container">
         <div className="footer-brand">
           <div className="footer-brand-name">

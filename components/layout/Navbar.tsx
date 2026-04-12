@@ -40,8 +40,8 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="#contato" className="nav-cta" onClick={() => setOpen(false)}>
-              Contato
+            <a href="#repositorio" className="nav-cta" onClick={() => setOpen(false)}>
+              Repositório
             </a>
           </li>
         </ul>
