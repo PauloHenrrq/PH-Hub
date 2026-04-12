@@ -1,4 +1,3 @@
-'use client';
 
 import Link from 'next/link';
 import { workflows } from '@/lib/data/workflows';
@@ -19,23 +18,28 @@ export default function WorkflowsSection() {
         </p>
 
         <div className="workflows-grid">
-          {currentWorkflows.map((workflow, index) => (
-            <div
-              key={workflow.command}
-              className="glass-card workflow-card"
-              data-reveal="fade-up"
-              data-delay={100 + (index % 3) * 50}
-            >
-              <div className="workflow-command">{workflow.command}</div>
-              <h3>{workflow.title}</h3>
-              <p>{workflow.description}</p>
-              <div className="workflow-tags">
-                {workflow.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
-              </div>
-            </div>
-          ))}
+          {currentWorkflows.map((workflow, index) => {
+            const slug = workflow.command.replace('/', '');
+            return (
+              <Link 
+                href={`/workflows/${slug}`} 
+                key={workflow.command}
+                className="glass-card workflow-card"
+                data-reveal="fade-up"
+                data-delay={100 + (index % 3) * 50}
+                style={{ display: 'flex', textDecoration: 'none' }}
+              >
+                <div className="workflow-command">{workflow.command}</div>
+                <h3>{workflow.title}</h3>
+                <p>{workflow.description}</p>
+                <div className="workflow-tags">
+                  {workflow.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {hasMore && (

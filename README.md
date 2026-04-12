@@ -1,79 +1,72 @@
-# PH.hub ◈
+# PH.hub ◈ Laboratório de Futuro
 
-O laboratório pessoal onde IA, código e design se encontram. Este "projeto zero" serve como base central para experimentação técnica, publicação de prompts avançados e curadoria de ferramentas que alimentam o fluxo de trabalho.
+O **PH Hub** é um laboratório pessoal de experimentação técnica onde Inteligência Artificial, código e design profissional se conectam. Este projeto serve como um hub centralizado para a publicação de prompts de engenharia fina, curadoria de ferramentas e automação de fluxos de trabalho modernos.
 
-## 🚀 Tecnologias
+---
 
-Migrado completamente de um ambiente estático (HTML/CSS/JS) para uma aplicação moderna e escalável:
+## 🧪 O Projeto
 
-- **Framework:** Next.js 15 (App Router)
-- **Linguagem:** TypeScript (Configurado em Flexible Mode)
-- **Estilização:** CSS puro via design system central (`globals.css`)
-- **UI/UX:** Glassmorphism, animações fluídas, e interação em tempo real (Intersection Observer API)
+O PH Hub nasceu da necessidade de um espaço unificado para documentar a evolução da engenharia de prompts e ferramentas de produtividade. Originalmente concebido como uma página estática, foi totalmente remodelado para o **Next.js 15**, trazendo robustez, performance e escalabilidade.
 
-## 📁 Estrutura do Projeto
+### 🚀 Stack Técnico
+- **Core**: Next.js 15 (App Router) + React 19.
+- **Linguagem**: TypeScript para integridade de dados e clareza estrutural.
+- **Performance**: Renderização Híbrida (Server/Client), carregamento de fontes otimizado e engine de animações leve via `requestAnimationFrame`.
+- **Estilização**: CSS Puro (Vanilla) com sistema de Design Tokens centralizado em variáveis globais.
+- **SEO & A11y**: Metadados avançados e conformidade com padrões de acessibilidade ARIA.
 
-A arquitetura foi redesenhada usando princípios de Clean Architecture adaptados ao ecossistema moderno do React:
+---
 
-```text
-/
-├── app/                      # Next.js App Router (Páginas e Layouts raízes)
-│   ├── globals.css           # Design system e tokens globais
-│   ├── layout.tsx            # Root layout com SEO e Partículas
-│   ├── page.tsx              # Página inicial unificada (Landing Page)
-│   └── prompts/              # Rotas dinâmicas/estáticas de prompts
-├── components/               # Sistema de Componentes React
-│   ├── layout/               # Elementos estruturais (Navbar, Footer)
-│   ├── sections/             # Seções modulares da página (Hero, About, etc.)
-│   ├── ui/                   # Micro-componentes reutilizáveis (Carousel, Particles)
-│   └── prompt/               # UI específica para exibição de prompts
-├── hooks/                    # Lógica isolada do Vanilla JS
-│   ├── useCardSpotlight.ts   # Efeito interativo de luz nos cards
-│   └── useRevealEngine.ts    # Engine de scroll animation (IntersectionObserver)
-├── lib/data/                 # "Data Layer" simulada (Tipagens e Arrays constantes)
-│   ├── projects.ts           # Banco de dados estático de projetos
-│   ├── prompts.ts            # Banco de dados estático de prompts
-│   └── tools.ts              # Banco de dados estático de ferramentas
-└── public/                   # Estáticos globais
-    ├── images/               # Backgrounds e assets
-    └── videos/               # Vídeos do Hero principal
-```
+## 📁 Estrutura de Navegação (True North)
 
-## 🛠 Como Executar Localmente
+Para desenvolvedores e colaboradores, aqui está o guia de onde encontrar cada parte vital do código:
+
+*   **`app/page.tsx`**: A orquestração principal da Landing Page.
+*   **`app/globals.css`**: O coração visual do projeto, contendo todos os tokens de cores, glassmorphism e utilitários.
+*   **`components/ui/`**: Micro-componentes reutilizáveis que garantem a interação consistente.
+*   **`lib/data/`**: A camada de dados estáticos onde vive a inteligência dos prompts, workflows e ferramentas.
+
+---
+
+## 🛠️ Como Executar Localmente
 
 ### Pré-requisitos
-- [Node.js](https://nodejs.org/en) (V20+ Recomendado)
-- Gerenciador de dependências (NPM, Yarn ou PNPM)
+- Node.js (v20+ recomendado)
+- NPM ou Yarn
 
 ### Instalação
 
-1. Clone o repositório
-\`\`\`bash
-git clone <url-do-repositorio>
+1. Clone o repositório:
+```bash
+git clone https://github.com/PauloHenrrq/PH-Hub.git
 cd PH-Hub
-\`\`\`
+```
 
-2. Instale as dependências
-\`\`\`bash
+2. Instale as dependências:
+```bash
 npm install
-\`\`\`
+```
 
-3. Inicie o servidor de desenvolvimento
-\`\`\`bash
+3. Inicie o servidor de desenvolvimento:
+```bash
 npm run dev
-\`\`\`
+```
 
-4. Acesse \`http://localhost:3000\` no seu navegador.
+4. Acesse `http://localhost:3000` e explore a experiência.
 
-## 🎨 Design System
+---
 
-A infraestrutura visual original foi rigorosamente documentada e transcrita para o novo ambiente, preservando a identidade "Cyber-Glass":
-- Cores dinâmicas geridas primariamente em tons Púrpuras (`var(--purple-*)`) e texturas de fundo profundas (`var(--bg-deep)`).
-- Componentes reativos (Cards com Spotlight).
-- Efeitos visuais mantidos sem necessidade imediata de bibliotecas pesadas externas (Sem Tailwind nesta versão base, privilegiando total controle no CSS puro criado).
+## 🛸 Roadmap de Evolução
 
-## 🔮 Roadmap / Próximos Passos
+- [x] Migração de Performance (Server Components).
+- [x] SEO & Metadados Avançados.
+- [ ] Integração com Headless CMS para gerenciamento remoto de prompts.
+- [ ] Expansão do sistema de internacionalização (i18n) completo.
 
-- Integração CI/CD automatizada.
-- Migração de estado dos Arrays Estáticos para banco de dados real com ORM (Prisma).
-- Implementação de Headless CMS para curadoria assíncrona dos conteúdos (Prompts & Ferramentas).
+---
+
+## 🎨 Contribuição & Licença
+
+Este é um laboratório pessoal, mas feedbacks e insights sobre engenharia de prompts são sempre bem-vindos via Issues ou discussões.
+
+Criado com paixão por **Paulo Henrique**.

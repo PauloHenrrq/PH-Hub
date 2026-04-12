@@ -2,30 +2,32 @@ const cards = [
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M9.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4.5" />
-        <path d="M14 2l6 6-9 9H5v-6L14 2z" />
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+      </svg>
+    ),
+    title: 'Conjunto de Ferramentas',
+    text: 'Recursos, utilitários e aplicações de desenvolvimento consolidadas. Soluções e ferramentas essenciais prontas para acelerar a construção de qualquer projeto técnico.',
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
       </svg>
     ),
     title: 'Engenharia de Prompts',
-    text: 'Criar prompts eficazes é uma habilidade técnica. Documento as estruturas que funcionam, os padrões que escalam e os princípios por trás de resultados consistentes.',
+    text: 'Modelos e estruturas validadas de comunicação com IA. Desde frameworks básicos a roteiros avançados de raciocínio, otimizados para máxima extração de valor.',
   },
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+        <line x1="9" y1="3" x2="9" y2="21" />
       </svg>
     ),
-    title: 'Código com Intenção',
-    text: 'Todo projeto aqui tem propósito: resolver um problema real, explorar um conceito técnico ou criar algo útil. Código como ferramenta de pensamento, não fim em si mesmo.',
-  },
-  {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="3" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
-      </svg>
-    ),
-    title: 'Aprendizado Público',
-    text: 'Compartilhar o processo, não só o resultado. Cada prompt publicado, cada ferramenta documentada é um registro de como o pensamento evolui com o tempo.',
+    title: 'Sistema de Workflows',
+    text: 'Fluxos de trabalhos integrados e sequenciais. Padronização de processos inteiros — desde a inicialização de projetos até a revisão autônoma do código.',
   },
 ];
 
@@ -35,14 +37,13 @@ export default function AboutSection() {
       <div className="container">
         <div className="build-line build-line--h-left" data-build-line />
 
-        <span className="section-label" data-reveal="fade-up" data-delay="0">◈ SOBRE</span>
+        <span className="section-label" data-reveal="fade-up" data-delay="0">◈ VISÃO GERAL</span>
         <h2 className="section-title" data-reveal="fade-up" data-delay="80">
-          Um laboratório em<br />
-          <span className="text-gradient">modo contínuo</span>
+          Um gostinho do<br />
+          <span className="text-gradient">Hub</span>
         </h2>
         <p className="section-description" data-reveal="fade-up" data-delay="160">
-          Não é um portfólio. É um espaço de experimentação ativa — onde prompts são
-          testados, ferramentas são comparadas e projetos nascem de curiosidade genuína.
+          Este espaço é uma documentação viva de recursos arquitetados para automação, performance e precisão. Aqui você encontrará um ecossistema projetado para elevar fluxos de trabalho e ampliar horizontes de desenvolvimento utilizando IA.
         </p>
 
         <div className="about-grid">

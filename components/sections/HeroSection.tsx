@@ -38,9 +38,20 @@ export default function HeroSection() {
   }, []);
 
   useEffect(() => {
-    const handler = () => setShowScroll(window.scrollY <= 80);
-    window.addEventListener('scroll', handler, { passive: true });
-    return () => window.removeEventListener('scroll', handler);
+    // Usamos IntersectionObserver para esconder o indicador de scroll 
+    // de forma performática quando o usuário começa a descer.
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Se o topo do hero sair da visão (está acima de 80px do topo)
+        setShowScroll(entry.intersectionRatio > 0.9);
+      },
+      { threshold: [0.9] }
+    );
+
+    const hero = document.getElementById('hero');
+    if (hero) observer.observe(hero);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -53,7 +64,8 @@ export default function HeroSection() {
           src="/videos/hero-forward.mp4"
           muted
           playsInline
-          preload="auto"
+          poster="/images/hero-bg.png"
+          preload="metadata"
         />
         <video
           ref={videoBRef}
@@ -61,7 +73,8 @@ export default function HeroSection() {
           src="/videos/hero-reversed.mp4"
           muted
           playsInline
-          preload="auto"
+          poster="/images/hero-bg.png"
+          preload="metadata"
         />
         <div className="hero-vignette" />
         <div className="hero-video-overlay" />

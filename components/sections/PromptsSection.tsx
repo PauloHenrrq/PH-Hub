@@ -20,23 +20,21 @@ export default function PromptsSection() {
 
         <div data-reveal="fade-up" data-delay="240">
           <Carousel>
-            {prompts.map((prompt) => {
-              const cardClass = `glass-card prompt-card${prompt.featured ? ' prompt-card--featured' : ''}`;
+            {prompts.slice(0, 4).map((prompt) => {
+              const cardClass = 'glass-card prompt-card';
+              const t = prompt.translations.pt;
 
               return (
-                <div className="carousel-item" key={prompt.title}>
+                <div className="carousel-item" key={prompt.slug}>
                   <div className={cardClass}>
                     <div className="prompt-card-header">
                       <span className="prompt-tag">{prompt.tag}</span>
-                      {prompt.featured && (
-                        <span className="prompt-card-badge">Destaque</span>
-                      )}
                     </div>
-                    <h3>{prompt.title}</h3>
-                    <p>{prompt.description}</p>
+                    <h3>{t.title}</h3>
+                    <p>{t.description}</p>
                     <div className="prompt-card-footer">
-                      {prompt.content ? (
-                        <Link href={`/prompts/${prompt.slug}`} className="prompt-card-link">
+                      {t.content ? (
+                        <Link href={`/prompts/${prompt.slug}`} className="prompt-card-link stretched-link">
                           Ler engenharia de prompt
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M5 12h14M12 5l7 7-7 7" />
@@ -56,6 +54,14 @@ export default function PromptsSection() {
                 </div>
               );
             })}
+
+            {/* See More Card */}
+            <div className="carousel-item">
+              <Link href="/prompts" className="glass-card prompt-card prompt-card--see-more">
+                <span className="see-more-text">Ver mais</span>
+              </Link>
+            </div>
+
           </Carousel>
         </div>
 

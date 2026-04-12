@@ -14,6 +14,7 @@ export default function Footer() {
           <a href="#ferramentas">Ferramentas</a>
           <a href="#prompts">Prompts</a>
           <a href="#workflows">Workflows</a>
+          <a href="#mcps">MCPs</a>
         </nav>
 
         <div className="footer-bottom">

@@ -1,7 +1,7 @@
-'use client';
 
 import Link from 'next/link';
 import { tools } from '@/lib/data/tools';
+import { ToolCard } from '@/components/ui/ToolCard';
 
 export default function ToolsSection() {
   const currentTools = tools.slice(0, 3);
@@ -22,20 +22,11 @@ export default function ToolsSection() {
 
         <div className="tools-grid">
           {currentTools.map((tool, index) => (
-            <div
-              key={tool.name}
-              className="glass-card tool-card"
-              data-reveal="fade-up"
-              data-delay={100 + (index % 3) * 50}
-            >
-              <div className="tool-card-icon">{tool.icon}</div>
-              <span className="tool-tag">{tool.tag}</span>
-              <h3>{tool.name}</h3>
-              <p className="tool-desc">{tool.description}</p>
-              <div className="tool-usage">
-                <span className="tool-usage-label">Uso:</span> {tool.usage}
-              </div>
-            </div>
+            <ToolCard 
+              key={tool.name} 
+              tool={tool} 
+              delay={100 + (index % 3) * 50} 
+            />
           ))}
         </div>
 
