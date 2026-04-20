@@ -23,6 +23,11 @@ O **PH Hub** é um laboratório pessoal de experimentação técnica — um hub 
 
 Originalmente concebido como uma página estática, foi totalmente reconstruído sobre **Next.js 16** com App Router, trazendo renderização híbrida (Server/Client Components), performance otimizada e uma identidade visual futurista baseada em **Glassmorphism** e animações procedurais.
 
+**Veja mais:**
+
+> [**Apresentação do HUB**](https://github.com/PauloHenrrq/PH-Hub/edit/main/PRESENTATION.md)  
+> [**Documentação**](https://github.com/PauloHenrrq/PH-Hub/blob/main/DOC_ARQUITETURA.md)  
+
 ---
 
 ## ✨ Funcionalidades
