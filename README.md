@@ -1,72 +1,236 @@
-# PH.hub ◈ Laboratório de Futuro
+<div align="center">
 
-O **PH Hub** é um laboratório pessoal de experimentação técnica onde Inteligência Artificial, código e design profissional se conectam. Este projeto serve como um hub centralizado para a publicação de prompts de engenharia fina, curadoria de ferramentas e automação de fluxos de trabalho modernos.
+<img src="public/readme-banner.jpg" alt="PH Hub — Laboratório de Futuro" width="100%" />
 
----
+<br/>
 
-## 🧪 O Projeto
+# PH HUB
 
-O PH Hub nasceu da necessidade de um espaço unificado para documentar a evolução da engenharia de prompts e ferramentas de produtividade. Originalmente concebido como uma página estática, foi totalmente remodelado para o **Next.js 15**, trazendo robustez, performance e escalabilidade.
+**Onde Inteligência Artificial, código e design se encontram.**
 
-### 🚀 Stack Técnico
-- **Core**: Next.js 15 (App Router) + React 19.
-- **Linguagem**: TypeScript para integridade de dados e clareza estrutural.
-- **Performance**: Renderização Híbrida (Server/Client), carregamento de fontes otimizado e engine de animações leve via `requestAnimationFrame`.
-- **Estilização**: CSS Puro (Vanilla) com sistema de Design Tokens centralizado em variáveis globais.
-- **SEO & A11y**: Metadados avançados e conformidade com padrões de acessibilidade ARIA.
+[![Next.js](https://img.shields.io/badge/Next.js-16-000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=000)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![CSS](https://img.shields.io/badge/Vanilla_CSS-Design_Tokens-7B34E1?style=for-the-badge&logo=css3&logoColor=white)](#-design-system)
 
----
-
-## 📁 Estrutura de Navegação (True North)
-
-Para desenvolvedores e colaboradores, aqui está o guia de onde encontrar cada parte vital do código:
-
-*   **`app/page.tsx`**: A orquestração principal da Landing Page.
-*   **`app/globals.css`**: O coração visual do projeto, contendo todos os tokens de cores, glassmorphism e utilitários.
-*   **`components/ui/`**: Micro-componentes reutilizáveis que garantem a interação consistente.
-*   **`lib/data/`**: A camada de dados estáticos onde vive a inteligência dos prompts, workflows e ferramentas.
+</div>
 
 ---
 
-## 🛠️ Como Executar Localmente
+## 🧬 Sobre o Projeto
+
+O **PH Hub** é um laboratório pessoal de experimentação técnica — um hub centralizado para publicação de **prompts de engenharia fina**, curadoria de **ferramentas de IA** e automação de **fluxos de trabalho modernos**.
+
+Originalmente concebido como uma página estática, foi totalmente reconstruído sobre **Next.js 16** com App Router, trazendo renderização híbrida (Server/Client Components), performance otimizada e uma identidade visual futurista baseada em **Glassmorphism** e animações procedurais.
+
+---
+
+## ✨ Funcionalidades
+
+| Módulo | Descrição |
+| :--- | :--- |
+| 🔧 **Workflows** | Fluxos de trabalho automatizados com visualização individual por slug dinâmico |
+| 📝 **Prompts** | Biblioteca de prompts otimizados com sistema de cópia rápida e suporte bilíngue (PT-BR / EN) |
+| 🛠️ **Tools** | Curadoria de ferramentas de IA categorizadas e com links diretos |
+| 🌐 **MCPs** | Catálogo de Model Context Protocols para integração com agentes de IA |
+| 🎨 **Design System** | Identidade visual unificada com partículas animadas, efeito spotlight e glassmorphism |
+
+---
+
+## 🚀 Stack Técnico
+
+<div align="center">
+
+| Camada | Tecnologia | Propósito |
+| :---: | :--- | :--- |
+| **Core** | Next.js 16 (App Router) + React 19 | Renderização híbrida e roteamento |
+| **Linguagem** | TypeScript 5 | Integridade de dados e clareza estrutural |
+| **Estilização** | Vanilla CSS + CSS Modules + Design Tokens | Controle total e zero dependência externa |
+| **Performance** | Server Components + `requestAnimationFrame` | Bundle mínimo e animações fluidas |
+| **SEO & A11y** | Metadados avançados + ARIA | Indexação e acessibilidade |
+
+</div>
+
+---
+
+## 📁 Arquitetura do Projeto
+
+<details>
+<summary><strong>🚀 app/</strong> — Rotas & Páginas (App Router)</summary>
+
+```
+app/
+├── layout.tsx                # Layout global — Providers, Navbar, Footer
+├── page.tsx                  # Home — Orquestração de todas as Sections
+├── globals.css               # Design Tokens, variáveis HSL e reset global
+├── page.module.css           # Estilos isolados da Home
+├── workflows/
+│   ├── page.tsx              # Listagem completa de Workflows
+│   └── [slug]/page.tsx       # Página individual de cada Workflow
+├── prompts/
+│   ├── page.tsx              # Listagem completa de Prompts
+│   └── [slug]/page.tsx       # Página individual de cada Prompt
+├── tools/page.tsx            # Listagem completa de Ferramentas
+└── mcps/page.tsx             # Listagem completa de MCPs
+```
+
+</details>
+
+<details>
+<summary><strong>🧱 components/</strong> — Biblioteca de Interface</summary>
+
+<details>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;<code>layout/</code> — Estrutura global permanente</summary>
+
+```
+├── Navbar.tsx                # Navegação principal com transparência
+└── Footer.tsx                # Rodapé com copyright
+```
+
+</details>
+
+<details>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;<code>sections/</code> — Blocos modulares da Home</summary>
+
+```
+├── HeroSection.tsx           # Banner principal + CTA
+├── AboutSection.tsx          # Propósito do PH Hub
+├── WorkflowsSection.tsx      # Vitrine de workflows
+├── ToolsSection.tsx          # Grid de ferramentas
+├── PromptsSection.tsx        # Galeria de prompts
+├── McpsSection.tsx           # Seção de protocolos MCP
+└── CtaSection.tsx            # Call-to-Action final
+```
+
+</details>
+
+<details>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;<code>ui/</code> — Design System atômico</summary>
+
+```
+├── McpCard.tsx               # Card com efeito hover para MCPs
+├── ToolCard.tsx              # Card padronizado para ferramentas
+├── Carousel.tsx              # Navegação horizontal com controles
+├── Particles.tsx             # Fundo animado com partículas
+├── EnergyConnector.tsx       # Decoração visual "neural"
+└── ScrollToTop.tsx           # Botão de retorno ao topo
+```
+
+</details>
+
+<details>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;<code>prompt/</code> — Componentes da feature Prompts</summary>
+
+```
+├── PromptClient.tsx          # Lógica client-side do prompt
+├── PromptView.tsx            # Visualização detalhada
+└── CopyPromptBtn.tsx         # Botão de cópia com feedback
+```
+
+</details>
+
+<details>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp;<code>workflow/</code> — Componentes da feature Workflows</summary>
+
+```
+└── WorkflowClient.tsx        # Client wrapper para Workflows
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><strong>💾 lib/</strong> — Camada de Dados</summary>
+
+```
+lib/data/
+├── workflows.ts              # Catálogo de todos os Workflows
+├── prompts.ts                # Base de prompts (PT-BR / EN)
+├── tools.ts                  # Catálogo de ferramentas de IA
+└── mcps.ts                   # Catálogo de protocolos MCP
+```
+
+</details>
+
+<details>
+<summary><strong>🧠 hooks/</strong> — Lógica de UX Reutilizável</summary>
+
+```
+hooks/
+├── useCardSpotlight.ts       # Efeito de luz que segue o cursor
+└── useRevealEngine.ts        # Animações de revelação por scroll
+```
+
+</details>
+
+<details>
+<summary><strong>📦 public/</strong> — Ativos Estáticos</summary>
+
+```
+public/
+├── images/                   # Imagens do projeto
+└── videos/                   # Vídeos demonstrativos
+```
+
+</details>
+
+---
+
+## 🎨 Design System
+
+A identidade visual do PH Hub foi construída sobre três pilares:
+
+- **Glassmorphism** — Superfícies translúcidas com blur e bordas sutis que criam profundidade.
+- **Design Tokens em HSL** — Paleta de cores centralizada em variáveis CSS para troca de tema instantânea.
+- **Micro-Animações Procedurais** — Partículas, efeito spotlight nos cards e revelação progressiva controlados via `requestAnimationFrame` e hooks customizados, sem dependência de bibliotecas externas de animação.
+
+---
+
+## 🛠️ Como Executar
 
 ### Pré-requisitos
-- Node.js (v20+ recomendado)
-- NPM ou Yarn
+
+- **Node.js** v20 ou superior
+- **npm** ou **yarn**
 
 ### Instalação
 
-1. Clone o repositório:
 ```bash
+# 1. Clone o repositório
 git clone https://github.com/PauloHenrrq/PH-Hub.git
 cd PH-Hub
-```
 
-2. Instale as dependências:
-```bash
+# 2. Instale as dependências
 npm install
-```
 
-3. Inicie o servidor de desenvolvimento:
-```bash
+# 3. Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-4. Acesse `http://localhost:3000` e explore a experiência.
+Acesse **`http://localhost:3000`** e explore a experiência.
 
 ---
 
-## 🛸 Roadmap de Evolução
+## 🧩 Padrões Arquiteturais
 
-- [x] Migração de Performance (Server Components).
-- [x] SEO & Metadados Avançados.
-- [ ] Integração com Headless CMS para gerenciamento remoto de prompts.
-- [ ] Expansão do sistema de internacionalização (i18n) completo.
+| Padrão | Aplicação no Projeto |
+| :--- | :--- |
+| **Server Components** | Páginas e layouts renderizados no servidor para SEO e performance |
+| **Client Components** | Interações (spotlight, scroll, cópia) isoladas com `"use client"` |
+| **Data Layer** | Conteúdo centralizado em `lib/data/` — desacoplado da UI |
+| **Feature Components** | Componentes especializados agrupados por domínio (`prompt/`, `workflow/`) |
+| **CSS Modules** | Estilos com escopo isolado para evitar colisões |
+| **Custom Hooks** | Lógica visual complexa extraída em hooks reutilizáveis |
 
 ---
 
-## 🎨 Contribuição & Licença
+## 📄 Licença & Contato
 
-Este é um laboratório pessoal, mas feedbacks e insights sobre engenharia de prompts são sempre bem-vindos via Issues ou discussões.
+Este é um laboratório pessoal de experimentação técnica. Feedbacks e insights sobre engenharia de prompts são sempre bem-vindos via **Issues** ou **Discussões**.
 
-Criado com paixão por **Paulo Henrique**.
+<div align="center">
+
+Criado com propósito por **Paulo Henrique** ◈
+
+</div>
