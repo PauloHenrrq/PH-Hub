@@ -65,6 +65,23 @@ export const tools: Tool[] = [
     }
   },
   {
+    icon: '✨',
+    tag: 'IA / Pesquisa',
+    name: 'Gemini',
+    description: 'IA do Google focada em pesquisa inteligente e geração multimodal: cria imagens, redige textos, responde dúvidas rápidas e esclarece conceitos complexos de forma visual.',
+    usage: 'Gerar imagens sob demanda, pesquisar informações atuais, redigir textos elaborados e obter explicações claras e visuais sobre qualquer assunto.',
+    url: 'https://gemini.google.com',
+    detailedContent: {
+      overview: 'O Gemini é a inteligência artificial multimodal do Google. Ele combina a força do maior motor de buscas do mundo com capacidades de geração de conteúdo: textos, imagens e até análise de documentos e fotos que você enviar. É o canivete suíço para quem precisa de respostas rápidas E visuais ao mesmo tempo.',
+      features: [
+        'Geração de imagens direto no chat — descreva o que quer e ele cria na hora, sem precisar de ferramentas externas.',
+        'Pesquisa integrada ao Google Search, trazendo informações atualizadas e verificáveis com fontes reais.',
+        'Capacidade de analisar imagens, PDFs e capturas de tela que você enviar, explicando o conteúdo ou extraindo dados relevantes.'
+      ],
+      useCase: 'Quando você precisa de uma resposta visual rápida (gerar um logo rascunho, um diagrama explicativo), pesquisar algo atual com a confiança do Google por trás, ou simplesmente esclarecer um conceito difícil de forma didática e ilustrada.',
+    }
+  },
+  {
     icon: '🔍',
     tag: 'IA / Operacional',
     name: 'Perplexity',
