@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Ferramentas', href: '#ferramentas' },
   { label: 'Prompts', href: '#prompts' },
   { label: 'Workflows', href: '#workflows' },
+  { label: 'Portfólio', href: '#portfolio' },
 ];
 
 export default function Navbar() {

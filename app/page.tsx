@@ -11,6 +11,7 @@ import RevealProvider from '@/components/providers/RevealProvider';
 const PromptsSection = dynamic(() => import('@/components/sections/PromptsSection'));
 const WorkflowsSection = dynamic(() => import('@/components/sections/WorkflowsSection'));
 const McpsSection = dynamic(() => import('@/components/sections/McpsSection'));
+const PortfolioSection = dynamic(() => import('@/components/sections/PortfolioSection'));
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
         <PromptsSection />
         <WorkflowsSection />
         <McpsSection />
+        <PortfolioSection />
         <CtaSection />
       </main>
       <Footer />
