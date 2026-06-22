@@ -165,5 +165,39 @@ export const mcps: Mcp[] = [
       ],
       useCase: 'Pilar sistêmico, útil indiretamente na maioria dos setups baseline por coordenar subprocessos globais sem explodir tokens quando algo estrutural dá erro entre diferentes MCPs simultâneos.'
     }
+  },
+  {
+    id: 'neon',
+    name: 'Neon',
+    description: 'Banco de dados serverless com branching instantâneo. Permite criar ramificações isoladas do banco para testar migrações, queries e deploys sem afetar a produção.',
+    tag: 'Database & Branching',
+    referenceUrl: 'https://neon.tech/docs/introduction',
+    icon: '⚡',
+    detailedContent: {
+      overview: 'O Neon estende o Postgres padrão com branching de banco de dados na velocidade de ramificações do Git. O agente pode criar ramificações isoladas (compute e storage) dinamicamente para rodar migrações de dados pesadas ou testar queries em ambientes de sandbox.',
+      features: [
+        'Criação e remoção de branches de banco de dados instantâneos via chamadas de API.',
+        'Provisionamento automático de conexões isoladas e seguras para cada branch de desenvolvimento.',
+        'Histórico completo de auditoria e monitoramento de queries lentas diretamente no console.'
+      ],
+      useCase: 'Ideal para automação de CI/CD, testes de estresse em migrações antes de rodar em produção e garantia de sandboxes isoladas para cada agente ou desenvolvedor programando em paralelo.'
+    }
+  },
+  {
+    id: 'stitch',
+    name: 'Stitch',
+    description: 'Orquestrador de design e prototipagem inteligente. Permite criar, carregar e atualizar sistemas de design e layouts de tela usando IA direto do prompt.',
+    tag: 'Design & UI',
+    referenceUrl: 'https://stitch.withgoogle.com/',
+    icon: '🎨',
+    detailedContent: {
+      overview: 'O Stitch simplifica a ponte entre a concepção de ideias visuais e a criação de layouts, permitindo que a IA manipule tokens e telas diretamente. Integra-se ao design system para gerar novas variantes de telas e documentar decisões de design.',
+      features: [
+        'Geração de telas a partir de prompts descritivos estruturados.',
+        'Edição e atualização iterativa de design systems e layouts de tela.',
+        'Mapeamento semântico de componentes para facilitar a exportação ao frontend.'
+      ],
+      useCase: 'Desenvolvimento ágil de interfaces, criação de protótipos de alta fidelidade sem a necessidade de desenhar cada elemento manualmente e validação de fluxos de navegação.'
+    }
   }
 ];

@@ -391,5 +391,185 @@ Entrega de documentação técnica formatada, pronta para ser colada no código,
 ## Step 3 — Auditoria de Lacunas
 Relatório final indicando quais funções complexas ou rotas ainda carecem de documentação no projeto.`
     }
+  },
+  {
+    command: '/arch',
+    title: 'Mermaid Diagram Generator',
+    description: 'Gerador automático de diagramas Mermaid baseados no código real. Mapeia fluxo de dados, estrutura de componentes, banco de dados, rotas de API e fluxos de autenticação.',
+    type: 'primary',
+    tags: ['Arquitetura', 'Documentação', 'Mermaid'],
+    content: {
+      en: `# Workflow: /arch
+
+<meta>
+  <trigger>/arch</trigger>
+  <description>Generates Mermaid diagrams of data flow, component tree, DB schema, API routes, or auth flow — reads actual project code before generating, confirms scope and diagram type, and delivers ready-to-paste Mermaid blocks.</description>
+</meta>
+
+## Step 1 — Define Scope and Diagram Type
+Selects diagram type: \`data-flow\`, \`component-tree\`, \`db-schema\`, \`api-routes\`, \`auth-flow\` or \`full\`. Scales checking node count to group or split.
+
+## Step 2 — Read Project Context
+Scans codebase (routes, components, Prisma schemas, session configs) to ensure the diagram strictly mirrors actual code structure.
+
+## Step 3 — Generate Diagram
+Outputs the Mermaid syntax for chosen type, marking any unverified components as \`[unverified]\` to prevent hallucinations.
+
+## Step 4 — Deliver and Adjust
+Presents the diagram block and prompts for adjustments or confirmation of accuracy.`,
+      pt: `# Workflow: /arch
+
+<meta>
+  <trigger>/arch</trigger>
+  <description>Gera diagramas Mermaid do fluxo de dados, árvore de componentes, schema de banco de dados, rotas de API ou fluxo de autenticação — lê o código real do projeto antes de gerar, confirma o escopo e o tipo de diagrama, e entrega blocos Mermaid prontos para colar.</description>
+</meta>
+
+## Step 1 — Definir Escopo e Tipo de Diagrama
+Seleciona o tipo de diagrama: \`data-flow\`, \`component-tree\`, \`db-schema\`, \`api-routes\`, \`auth-flow\` ou \`full\`. Valida a escala para agrupar ou dividir se necessário.
+
+## Step 2 — Ler Contexto do Projeto
+Varre o código real (rotas, componentes, schemas Prisma, sessões) para garantir que o diagrama represente fielmente a arquitetura existente.
+
+## Step 3 — Gerar Diagrama
+Gera a sintaxe Mermaid baseada apenas no código analisado, marcando nós não resolvidos como \`[unverified]\` para evitar alucinações.
+
+## Step 4 — Entregar e Ajustar
+Entrega os blocos prontos e solicita ajustes ou confirmação de precisão.`
+    }
+  },
+  {
+    command: '/log',
+    title: 'Structured Progress Log',
+    description: 'Registro cronológico de evolução do projeto. Atualiza a seção de progresso no Workspace MD mantendo o histórico de decisões e entregas de forma concisa.',
+    type: 'primary',
+    tags: ['Progresso', 'Documentação', 'Histórico'],
+    content: {
+      en: `# Workflow: /log
+
+<meta>
+  <trigger>/log</trigger>
+  <description>Appends a structured progress entry to the project's Workspace MD Progress Log section. Captures what was done, decisions made, and next steps.</description>
+</meta>
+
+## Step 1 — Read Workspace MD
+Locates the Progress Log markers (\`<!-- LOG_START -->\` / \`<!-- LOG_END -->\`) inside the Workspace MD configuration.
+
+## Step 2 — Collect Entry Context
+Collects changes via git diff (\`auto\` mode) or user prompt (\`manual\` / \`milestone\` mode) to capture key metrics.
+
+## Step 3 — Generate Log Entry
+Formats a unified progress entry containing: type (feat, fix, refactor, setup, etc.), summary, what was done, decisions, workflows, and next steps.
+
+## Step 4 — Confirm and Append
+Presents preview of the entry for user verification before modifying the Markdown file.`,
+      pt: `# Workflow: /log
+
+<meta>
+  <trigger>/log</trigger>
+  <description>Adiciona uma entrada estruturada de progresso na seção Progress Log do Workspace MD do projeto. Captura o que foi feito, as decisões tomadas e os próximos passos.</description>
+</meta>
+
+## Step 1 — Ler Workspace MD
+Localiza os marcadores de Log (\`<!-- LOG_START -->\` / \`<!-- LOG_END -->\`) dentro da configuração do Workspace MD.
+
+## Step 2 — Coletar Contexto da Entrada
+Coleta as alterações via git diff (modo \`auto\`) ou via prompt do usuário (modo \`manual\` / \`milestone\`) para capturar as principais métricas.
+
+## Step 3 — Gerar Entrada do Log
+Formata a entrada de progresso unificada contendo: tipo (feat, fix, refactor, setup, etc.), sumário, o que foi feito, decisões, workflows e próximos passos.
+
+## Step 4 — Confirmar e Anexar
+Exibe a visualização da entrada para verificação do usuário antes de realizar a escrita real no arquivo Markdown.`
+    }
+  },
+  {
+    command: '/perf',
+    title: 'Performance Auditor',
+    description: 'Análise profunda em 7 dimensões de performance (latência, renderização, queries N+1, bundle, loops, CPU). Classifica impactos e propõe correções precisas baseadas na tipagem progressiva do projeto.',
+    type: 'analysis',
+    tags: ['Performance', 'Otimização', 'Cultura Sênior'],
+    content: {
+      en: `# Workflow: /perf
+
+<meta>
+  <trigger>/perf</trigger>
+  <description>Analyzes the defined scope exclusively for performance issues across all relevant dimensions, prioritizes findings by impact, explains the root cause in depth, and suggests precise fixes.</description>
+</meta>
+
+## Step 1 — Define Scope
+Specifies the files or folders to analyze. Protects large files (> 800 lines) by analyzing them section-by-section.
+
+## Step 2 — Read Project Context
+Reads typescript strictness level and architectural patterns to match suggestions and coding style of the project.
+
+## Step 3 — Analyze Performance
+Audits code using the Evidence Gate: Net, Re-renders, DB Queries (N+1), Bundle Size, Blocking IO, CPU loops, Memory, Cache.
+
+## Step 4 — Prioritize and Fix
+Groups issues by impact (High, Medium, Low) and suggests exact, code-conforming solutions waiting for block-by-block approval.`,
+      pt: `# Workflow: /perf
+
+<meta>
+  <trigger>/perf</trigger>
+  <description>Analisa o escopo definido exclusivamente para problemas de performance em todas as dimensões relevantes, prioriza descobertas por impacto, explica a causa raiz em detalhes e sugere correções precisas.</description>
+</meta>
+
+## Step 1 — Definir Escopo
+Especifica os arquivos ou diretórios para análise. Protege arquivos grandes (> 800 linhas) analisando-os por seções.
+
+## Step 2 — Ler Contexto do Projeto
+Lê a configuração de rigor do typescript e padrões arquiteturais para alinhar as sugestões de refatoração com o estilo de código do projeto.
+
+## Step 3 — Analisar Performance
+Audita o escopo cruzando a barreira de evidência (Evidence Gate): Rede, Re-renderizações, Queries DB (N+1), Tamanho de Bundle, Operações Bloqueantes, Loops CPU, Memória, Cache.
+
+## Step 4 — Priorizar e Corrigir
+Agrupa problemas por impacto (Alto, Médio, Baixo) e sugere soluções de código precisas aguardando aprovação bloco a bloco.`
+    }
+  },
+  {
+    command: '/skill',
+    title: 'Skills Library Integrator',
+    description: 'Varredura e aplicação inteligente da biblioteca de habilidades (SKILLS). Busca padrões validados, apresenta alternativas adequadas e aplica de forma integrada ao projeto.',
+    type: 'action',
+    tags: ['Skills', 'Reutilização', 'Melhores Práticas'],
+    content: {
+      en: `# Workflow: /skill
+
+<meta>
+  <trigger>/skill</trigger>
+  <description>Scans the SKILLS library at C:\\Users\\paulo\\workspace\\SKILLS, matches skills to the current project context, presents applicable options, and applies selected skills.</description>
+</meta>
+
+## Step 1 — Define Intent
+Determines whether to browse categories, search keyword, apply a named skill, or auto-suggest based on context.
+
+## Step 2 — Scan and Filter
+Searches the 1000+ local skills and builds a filtered, relevant subset aligned with current stack and task type.
+
+## Step 3 — Match to Context
+Scores relevance by stack match, architectural pattern, and task goals using Workspace MD as primary source.
+
+## Step 4 — Preview and Apply
+Shows details (requirements, files, compatibility) of selected skill, adapting placeholders and typescript types before delivering blocks.`,
+      pt: `# Workflow: /skill
+
+<meta>
+  <trigger>/skill</trigger>
+  <description>Varre a biblioteca SKILLS em C:\\Users\\paulo\\workspace\\SKILLS, cruza as habilidades com o contexto do projeto atual, apresenta as opções aplicáveis e aplica as selecionadas.</description>
+</meta>
+
+## Step 1 — Definir Intenção
+Determina se deseja navegar por categorias, buscar palavras-chave, aplicar uma skill específica ou sugerir automaticamente baseado no contexto.
+
+## Step 2 — Varrer e Filtrar
+Busca nas mais de 1000 skills locais e constrói uma lista filtrada e relevante alinhada com a stack e o tipo de tarefa atual.
+
+## Step 3 — Cruzar com o Contexto
+Calcula relevância por compatibilidade de stack, padrão arquitetural e metas da tarefa usando o Workspace MD como guia principal.
+
+## Step 4 — Preview e Aplicação
+Apresenta detalhes (requisitos, arquivos, compatibilidade) da skill selecionada, adaptando variáveis e tipos TypeScript antes de entregar os blocos.`
+    }
   }
 ];
