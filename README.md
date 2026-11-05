@@ -34,10 +34,11 @@ Originalmente concebido como uma página estática, foi totalmente reconstruído
 
 | Módulo | Descrição |
 | :--- | :--- |
-| 🔧 **Workflows** | Fluxos de trabalho automatizados com visualização individual por slug dinâmico |
-| 📝 **Prompts** | Biblioteca de prompts otimizados com sistema de cópia rápida e suporte bilíngue (PT-BR / EN) |
-| 🛠️ **Tools** | Curadoria de ferramentas de IA categorizadas e com links diretos |
-| 🌐 **MCPs** | Catálogo de Model Context Protocols para integração com agentes de IA |
+| 🔧 **Workflows** | 19 fluxos de trabalho automatizados (`/init`, `/build`, `/gate`, `/commit`, `/chat`, `/experience`, `/po`, `/governance`, etc.) com visualização por slug dinâmico |
+| 🧬 **Frameworks & Skills** | Metodologias de engenharia agêntica (GSD-Core, Ponytail, Caveman, Superpowers, OpenSpec, DSPy, LangGraph e Behavior Core & Skills Ecosystem) |
+| 📝 **Prompts** | Biblioteca de prompts de engenharia fina com sistema de cópia rápida e suporte bilíngue (PT-BR / EN) |
+| 🛠️ **Tools & CLIs** | Curadoria de ferramentas de IA, IDEs agênticas e variantes de linha de comando diretas (`gh`, `playwright`, `neonctl`, `psql`) |
+| 🌐 **MCPs** | Catálogo de Model Context Protocols com comparativo de 2ª opção em Modo Direto (CLI sem overhead de tokens) |
 | 🎨 **Design System** | Identidade visual unificada com partículas animadas, efeito spotlight e glassmorphism |
 
 ---
