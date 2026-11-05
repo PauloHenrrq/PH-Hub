@@ -1,17 +1,20 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="footer" id="repositorio">
       <div className="container footer-container">
         <div className="footer-brand">
-          <div className="footer-brand-name">
+          <Link href="/" className="footer-brand-name" style={{ textDecoration: 'none', color: 'inherit' }}>
             <span style={{ color: 'var(--purple-500)' }}>◈</span> PH.hub
-          </div>
+          </Link>
           <p>Um laboratório pessoal de IA, código e design.</p>
         </div>
 
         <nav className="footer-links" aria-label="Links do rodapé">
           <a href="#sobre">Sobre</a>
           <a href="#ferramentas">Ferramentas</a>
+          <a href="#frameworks">Frameworks</a>
           <a href="#prompts">Prompts</a>
           <a href="#workflows">Workflows</a>
           <a href="#mcps">MCPs</a>

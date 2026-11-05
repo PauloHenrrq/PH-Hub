@@ -52,7 +52,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable}`}>
+    <html 
+      lang="pt-BR" 
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${jetbrainsMono.variable} ${spaceGrotesk.variable}`}
+    >
       <body className={inter.className}>
         <Particles />
         {children}

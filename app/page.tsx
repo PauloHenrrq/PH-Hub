@@ -8,6 +8,7 @@ import CtaSection from '@/components/sections/CtaSection';
 import RevealProvider from '@/components/providers/RevealProvider';
 
 // Dynamic imports para seções abaixo do fold
+const FrameworksSection = dynamic(() => import('@/components/sections/FrameworksSection'));
 const PromptsSection = dynamic(() => import('@/components/sections/PromptsSection'));
 const WorkflowsSection = dynamic(() => import('@/components/sections/WorkflowsSection'));
 const McpsSection = dynamic(() => import('@/components/sections/McpsSection'));
@@ -21,6 +22,7 @@ export default function HomePage() {
         <HeroSection />
         <AboutSection />
         <ToolsSection />
+        <FrameworksSection />
         <PromptsSection />
         <WorkflowsSection />
         <McpsSection />
