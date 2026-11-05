@@ -166,4 +166,109 @@ export const tools: Tool[] = [
       useCase: 'Fazer o fundo majestoso em clipe de abertura ou gerar imagens que reagem em um loop 3D contínuo e orgânico. Excelente pra elevar um hub digital aos padrões estéticos de sites "premiados".',
     }
   },
+  {
+    icon: '💻',
+    tag: 'IA / CLI AGENT',
+    name: 'Claude Code',
+    description: 'Ferramenta de linha de comando agêntica da Anthropic que opera diretamente no seu terminal, navegando pelo repositório, editando arquivos e rodando testes.',
+    usage: 'Orquestrar refatorações complexas, resolver bugs ponta a ponta e executar comandos de terminal com raciocínio profundo.',
+    url: 'https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview',
+    detailedContent: {
+      overview: 'O Claude Code leva o raciocínio do modelo diretamente para o shell do desenvolvedor. Ele opera com ferramentas nativas de terminal, compilação de diffs cirúrgicos e um motor de busca semântica embutido na árvore de arquivos.',
+      features: [
+        'Execução autônoma de comandos shell, testes e git commits controlados.',
+        'Edição multi-arquivos com compilação de diffs atômicos.',
+        'Gerenciamento automático de contexto e histórico de compactação.'
+      ],
+      useCase: 'Resolução de issues complexas, criação de suítes de testes automatizados e refatorações multi-módulos diretamente pelo terminal.'
+    }
+  },
+  {
+    icon: '⚡',
+    tag: 'IA / IDE',
+    name: 'Cursor',
+    description: 'Editor de código bifurcado do VS Code focado em IA, com indexação vetorial completa do repositório, Composer multi-arquivos e suporte a regras customizadas.',
+    usage: 'Programação pareada diária, edição simultânea de vários arquivos e navegação inteligente por bases de código gigantes.',
+    url: 'https://cursor.com',
+    detailedContent: {
+      overview: 'O Cursor cria embeddings de todos os arquivos do workspace, permitindo consultas semânticas (@codebase) e edições sincronizadas em múltiplos arquivos através do recurso Composer.',
+      features: [
+        'Indexação semântica do repositório com suporte a referências contextuais (@Files, @Docs, @Web).',
+        'Composer para edições e geração de código orquestrada em dezenas de arquivos simultâneos.',
+        'Suporte nativo a servidores MCP e arquivos de governança .cursorrules.'
+      ],
+      useCase: 'Desenvolvimento full-stack ágil no dia a dia com geração rápida de componentes, refatorações assistidas e depuração inline.'
+    }
+  },
+  {
+    icon: '🐙',
+    tag: 'DEV TOOLS / CLI DIRETO',
+    name: 'GitHub CLI (gh)',
+    description: 'Variante nativa direta para automação do GitHub via terminal sem MCP. Permite abrir e revisar PRs, listar issues, acionar workflows do Actions e clonar repositórios.',
+    usage: 'gh pr create --fill && gh pr view --web',
+    url: 'https://cli.github.com/',
+    detailedContent: {
+      overview: 'O GitHub CLI (gh) traz todo o ecossistema do GitHub para o shell. Ao utilizá-lo diretamente, desenvolvedores e agentes eliminam a necessidade de camadas intermediárias de MCP, executando chamadas autenticadas com zero overhead de tokens e velocidade imediata de execução.',
+      features: [
+        'Criação, merge e revisão de Pull Requests inteiros direto no terminal.',
+        'Consulta rápida de Issues, releases e comentários sem abrir o navegador.',
+        'Disparo e inspeção de logs de pipelines do GitHub Actions em tempo real.'
+      ],
+      useCase: 'Automação de workflows de git, esteiras de entrega contínua e revisões ágeis de código por agentes locais.'
+    }
+  },
+  {
+    icon: '🎭',
+    tag: 'DEV TOOLS / CLI DIRETO',
+    name: 'Playwright Test CLI',
+    description: 'Variante nativa direta de automação e testes E2E sem MCP. Oferece execução paralela headless de alta performance, gravação de traces em vídeo e geração visual de código.',
+    usage: 'npx playwright test --ui | npx playwright codegen localhost:3000',
+    url: 'https://playwright.dev/',
+    detailedContent: {
+      overview: 'O CLI do Playwright permite testes de ponta a ponta sem o atraso ou complexidade de protocolos de socket. Suporta multi-browser (Chromium, Firefox, WebKit), gera relatórios em HTML com capturas passo a passo e grava vídeos de regressão visual.',
+      features: [
+        'Comando codegen para gravação de interações do usuário e geração instantânea de asserts.',
+        'Modo UI interativo com depuração temporal (time-travel debugging).',
+        'Execução paralela distribuída com relatórios HTML automáticos.'
+      ],
+      useCase: 'Suítes de testes determinísticos de regressão, raspagem avançada e validação de qualidade de aplicações web modernas.'
+    }
+  },
+  {
+    icon: '⚡',
+    tag: 'DEV TOOLS / CLI DIRETO',
+    name: 'Neon CLI (neonctl)',
+    description: 'Variante nativa direta do Neon Serverless Postgres. Permite criar e destruir ramificações (branching) instantâneas do banco de dados e obter connection strings temporárias via terminal.',
+    usage: 'neonctl branches create --name feature-sandbox',
+    url: 'https://neon.tech/docs/reference/cli-install',
+    detailedContent: {
+      overview: 'O neonctl permite controle total da infraestrutura de dados serverless do Neon pelo terminal. Perfeito para agentes de IA que precisam criar sandboxes isoladas de dados para testar migrações perigosas sem afetar o banco principal.',
+      features: [
+        'Criação e deleção instantânea de branches de banco de dados via CLI.',
+        'Geração de connection strings seguras e efêmeras para testes de integração.',
+        'Zero overhead de comunicação, ideal para esteiras de CI/CD.'
+      ],
+      useCase: 'Testes de migrações e validação de schemas em ambientes efêmeros antes de qualquer deploy em produção.'
+    }
+  },
+  {
+    icon: '🐘',
+    tag: 'DEV TOOLS / CLI DIRETO',
+    name: 'PostgreSQL CLI (psql)',
+    description: 'O cliente de terminal definitivo para PostgreSQL. Executa scripts DDL em lote, transações seguras, análises de índices e dumps completos com confiabilidade máxima.',
+    usage: 'psql "$DATABASE_URL" -c "EXPLAIN ANALYZE SELECT ..."',
+    url: 'https://www.postgresql.org/docs/current/app-psql.html',
+    detailedContent: {
+      overview: 'O psql é o padrão de ouro para administração e consulta direta de bancos PostgreSQL. Elimina restrições de payload e timeouts comuns em pontes HTTP/MCP, permitindo operações forenses e ajustes finos de índices.',
+      features: [
+        'Comandos de metadados completos (\\d+, \\di, \\dn, \\dt) para radiografia do banco.',
+        'Execução de scripts SQL extensos e migrações DDL em transações atômicas seguras.',
+        'Integração nativa com pg_dump e pg_restore para rotinas de backup.'
+      ],
+      useCase: 'Investigação de gargalos de query com EXPLAIN ANALYZE, auditoria de locks e aplicação de patches estruturais no banco.'
+    }
+  }
 ];
+
+
+
