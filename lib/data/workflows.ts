@@ -66,49 +66,53 @@ Entrega do "True North" do projeto: um guia de navegação no README e a documen
   },
   {
     command: '/build',
-    title: 'Zero-to-One Builder',
-    description: 'Algoritmo mestre de desenvolvimento iterativo. Desenvolve a arquitetura de features do zero até o deploy inicial.',
+    title: 'Zero-to-One Autonomous Builder & Prototyping',
+    description: 'Motor de construção autônoma: infere a stack contextual (Next.js/TS ou Python), valida regras de negócio, gera opções de Wireframe HTML (Kombai) e executa engenharia em camadas com Ruthless Audit.',
     type: 'action',
-    tags: ['Iterativo', 'TDD', 'Feature'],
+    tags: ['Iterativo', 'Wireframes', 'Kombai', 'Full-Stack'],
     content: {
       en: `# Workflow: /build
 
 <meta>
   <trigger>/build</trigger>
-  <description>Master orchestration engine for zero-to-one project construction or heavy feature development. Chains planning, modeling, and iterative coding in a controlled flow.</description>
+  <description>Master Zero-to-One Autonomous Builder & Prototyping Workflow. Analyzes project context to infer the best stack (Python for RPA/Data Pipelines; Next.js/TypeScript for Web/SaaS/Dashboards), evaluates market-level rigor, generates HTML Lo-Fi Wireframe options, and executes layered engineering with Multi-Agent Ruthless Audit.</description>
 </meta>
 
-## Step 1 — Context & Planning
-Reads Workspace MD to adapt language and technical rigor. Creates a detailed structural plan including entity modeling, architectural patterns, and API contracts.
+## Step 1 — Contextual Stack & Market Level Inference
+Automatically infers stack selection (Python for RPA/Automation/ML; Next.js App Router + TS + Tailwind v4 + Prisma for Web/SaaS; or Hybrid) and evaluates application rigor (Study/MVP vs B2B Production SaaS).
 
-## Step 2 — Iterative Build Loop
-Layer-by-layer construction:
-1. **Persistence**: Data models and migrations.
-2. **Business Rules**: Services and core logic.
-3. **Controllers/Actions**: Routes and request processing.
-4. **Interface**: UI components and final integration.
+## Step 2 — Business Rules & Edge Cases Validation
+Maps the core happy path, critical edge cases (network failures, invalid states, incomplete data), and external integration points before writing any code.
 
-## Step 3 — Validation Checklist
-Final scan for forgotten logs, explicit error handling, and compliance with the project's TypeScript level.`,
+## Step 3 — Kombai Local Inspiration & Wireframe Prototyping
+Queries local design inspirations, selects 2 distinct visual directions, and generates 2 HTML Lo-Fi Wireframe options (\`lofi-wireframe-opcao-1.html\` / \`opcao-2.html\`) with \`[REUSE]\` and \`[NEW]\` component badges.
+
+## Step 4 — Scope & Visual Alignment (Confirm Always)
+Presents mapped business rules, selected stack, and interactive wireframe options for explicit user approval before production coding.
+
+## Step 5 — Layered Engineering & Multi-Agent Audit Gate
+Executes layered construction (Persistence → Domain Services → Controllers/Actions → UI) and triggers the **Ruthless Code & Arch Auditor** before delivering the True North in \`WORKSPACE.md\`.`,
       pt: `# Workflow: /build
 
 <meta>
   <trigger>/build</trigger>
-  <description>Motor de orquestração mestre para construção de projetos do zero ou desenvolvimento de grandes features. Encadeia planejamento, modelagem e codificação iterativa em um fluxo controlado.</description>
+  <description>Master Zero-to-One Autonomous Builder & Prototyping Workflow. Analisa o contexto do projeto para inferir a melhor stack (Python para RPA/Dados; Next.js/TypeScript para Web/SaaS/Dashboards), avalia o rigor de mercado, gera opções de Wireframe HTML Lo-Fi e executa engenharia em camadas com Multi-Agent Ruthless Audit.</description>
 </meta>
 
-## Step 1 — Contexto e Planejamento
-Leitura do Workspace MD para adaptar a linguagem e o rigor técnico. Criação de um plano estrutural detalhado incluindo modelagem de entidades, padrões arquiteturais e contrato de API.
+## Step 1 — Inferência Contextual de Stack & Rigor de Mercado
+Seleciona dinamicamente a stack ideal (Python para RPA/Scraping/ML; Next.js App Router + TS + Tailwind v4 + Prisma para Web/SaaS; ou Híbrido) e classifica o rigor (MVP Rápido vs Produto B2B Enterprise).
 
-## Step 2 — Loop de Construção Iterativo
-Construção camada por camada:
-1. **Persistência**: Modelos de dados e migrações.
-2. **Regras de Negócio**: Serviços e lógica central.
-3. **Controladores/Actions**: Rotas e processamento de requests.
-4. **Interface**: Componentes UI e integração final.
+## Step 2 — Validação de Regras de Negócio & Casos de Borda
+Mapeia o fluxo principal (Happy Path), casos de borda críticos (quedas de rede, estados inválidos, dados incompletos) e integrações antes de codificar.
 
-## Step 3 — Checklist de Validação
-Varredura final por logs esquecidos, tratamento de erros explícito e conformidade com o nível de TypeScript do projeto.`
+## Step 3 — Inspiração Kombai & Prototipagem de Wireframes
+Consulta referências visuais locais, seleciona 2 direções estéticas distintas e gera 2 opções de Wireframes HTML Lo-Fi (\`lofi-wireframe-opcao-1.html\` / \`opcao-2.html\`) com badges \`[REUSAR]\` e \`[NOVO]\`.
+
+## Step 4 — Alinhamento de Escopo & Visual (Confirm Always)
+Apresenta as regras de negócio mapeadas, a stack escolhida e os wireframes interativos para aprovação explícita antes de iniciar o código de produção.
+
+## Step 5 — Engenharia em Camadas & Audit Gate Multi-Agente
+Constrói camada por camada (Persistência → Serviços de Domínio → Controllers/Actions → UI) e dispara o **Subagente Auditor (Ruthless Code & Arch Auditor)** antes da entrega com mapa **True North** no \`WORKSPACE.md\`.`
     }
   },
   {
@@ -238,41 +242,61 @@ Análise de riscos colaterais (vazamento de dados, gaps de autenticação) e sug
   },
   {
     command: '/commit',
-    title: 'Release & Git',
-    description: 'Saúde pré-commit: gera logs semânticos automáticos (Semantic Commits), passa por heurísticas leves de verificação e consolida os checkpoints.',
+    title: 'Atomic Release & Git Governance',
+    description: 'Governança estrita de Git: exige aprovação prévia do /gate (🟢 PASS), fragmenta diffs em grupos atômicos por hunk/camada e gera Conventional Commits estruturados (O que foi feito / O que NÃO foi feito / Por quê).',
     type: 'action',
-    tags: ['Git', 'Semantic', 'Release'],
+    tags: ['Git Atômico', 'Quality Gate', 'Conventional Commits'],
     content: {
       en: `# Workflow: /commit
 
 <meta>
   <trigger>/commit</trigger>
-  <description>Scans changes, reviews code health, and generates semantic messages.</description>
+  <description>Scans changes, validates mandatory Quality Gate (/gate) approval, fragments into atomic commit groups, reviews health, teaches Conventional Commits with Structured Explanations (What was done / What was NOT done / Why), presents the full plan, and executes all commits + push on confirmation.</description>
 </meta>
 
-## Step 1 — Pre-Commit Health Check
-Quick scan for forgotten logs, lint alerts, unresolved TODOs, and critical risks like exposed credentials in the code.
+## Step 0 — Mandatory Quality Gate Validator (/gate Enforcement)
+Strictly blocks any staging or commit until the \`/gate\` workflow has been executed and approved with \`🟢 PASS\` status. Zero exceptions or overrides permitted.
 
-## Step 2 — Semantic Suggestion
-Classification of changes according to the Conventional Commits standard (feat, fix, refactor, chore, etc.) and generation of a clear, concise message.
+## Step 1 — Scan & Fragment Into Atomic Commit Groups
+Runs \`git status\` and \`git diff -U3\` to split modified files and UI hunks into atomic commit groups following the strict 8-tier priority hierarchy:
+1. Dependencies & Config → 2. Database & Schema → 3. Core / Domain → 4. Feature / API → 5. UI / Components → 6. Styling → 7. Tests → 8. Documentation.
 
-## Step 3 — Execution & Next Steps
-Git command confirmation and recommendation of the next action (push, opening a PR, or progress log).`,
+## Step 2 — Pre-Commit Health Check
+Scans all groups for leftover \`console.log\`/\`debugger\`, ESLint warnings, unresolved TODOs, explicit \`any\` risks, broken imports, or hardcoded secrets.
+
+## Step 3 — Full Commit Plan with Enterprise Descriptions
+Presents the complete commit plan where every commit includes a structured body:
+- \`- O que foi feito:\` (factual description of changes)
+- \`- O que NÃO foi feito:\` (strict scope boundary)
+- \`- Por quê:\` (technical rationale)
+
+## Step 4 — Explicit Staging & Sequential Execution
+Stages files explicitly via \`git add <file>\` or hunk patches via \`git apply --cached\` (never \`git add .\`), executes sequential local commits, and pushes to the remote branch.`,
       pt: `# Workflow: /commit
 
 <meta>
   <trigger>/commit</trigger>
-  <description>Varre alterações, revisa a saúde do código e gera mensagens semânticas.</description>
+  <description>Varre alterações, valida a aprovação obrigatória do Quality Gate (/gate), fragmenta em grupos de commits atômicos por hunk, revisa a saúde do código e executa Conventional Commits estruturados (O que foi feito / O que NÃO foi feito / Por quê).</description>
 </meta>
 
-## Step 1 — Pre-Commit Health Check
-Varredura rápida em busca de logs esquecidos, alertas de lint, TODOs não resolvidos e riscos críticos como credenciais expostas no código.
+## Step 0 — Validador Obrigatório do Quality Gate (/gate Enforcement)
+Bloqueia terminantemente qualquer stage ou commit até que o workflow \`/gate\` tenha sido executado e aprovado com status \`🟢 PASS\`. Não existe exceção, bypass ou override.
 
-## Step 2 — Sugestão Semântica
-Classificação da mudança de acordo com o padrão Conventional Commits (feat, fix, refactor, chore, etc) e geração de uma mensagem clara e concisa.
+## Step 1 — Varredura & Fragmentação em Grupos Atômicos
+Executa \`git status\` e \`git diff -U3\` para dividir arquivos e hunks em grupos atômicos seguindo a hierarquia de prioridades de 8 níveis:
+1. Dependencies & Config → 2. Database & Schema → 3. Core / Domain → 4. Feature / API → 5. UI / Components → 6. Styling → 7. Tests → 8. Documentation.
 
-## Step 3 — Execução e Próximos Passos
-Confirmação do comando git e recomendação da próxima ação (push, abertura de PR ou log de progresso).`
+## Step 2 — Pre-Commit Health Check
+Analisa todos os grupos contra \`console.log\`/\`debugger\` esquecidos, erros de ESLint, TODOs pendentes, riscos de tipagem, imports quebrados ou credenciais expostas.
+
+## Step 3 — Plano Completo com Descrições Sóbrias
+Apresenta o plano completo de commits exigindo corpo estruturado honesto:
+- \`- O que foi feito:\` (descrição factual e sucinta)
+- \`- O que NÃO foi feito:\` (delimitação estrita de escopo)
+- \`- Por quê:\` (justificativa técnica da decisão)
+
+## Step 4 — Stage Explícito & Execução Sequencial
+Realiza stage explícito via \`git add <arquivo>\` ou patch de hunks via \`git apply --cached\` (proibido \`git add .\`), cria os micro-commits locais em sequência e executa \`git push\`.`
     }
   },
   {
@@ -529,47 +553,346 @@ Agrupa problemas por impacto (Alto, Médio, Baixo) e sugere soluções de códig
   },
   {
     command: '/skill',
-    title: 'Skills Library Integrator',
-    description: 'Varredura e aplicação inteligente da biblioteca de habilidades (SKILLS). Busca padrões validados, apresenta alternativas adequadas e aplica de forma integrada ao projeto.',
+    title: 'Skills Library & Ecosystem Integrator',
+    description: 'Varredura e orquestração da biblioteca de +1000 SKILLS (C:\\Users\\paulo\\workspace\\dev\\.agents\\skills) e especialistas DXE/FinOps/Cloud/Multi-Tenant.',
     type: 'action',
-    tags: ['Skills', 'Reutilização', 'Melhores Práticas'],
+    tags: ['Skills', 'Orquestração', 'Melhores Práticas', 'Agentes'],
     content: {
       en: `# Workflow: /skill
 
 <meta>
   <trigger>/skill</trigger>
-  <description>Scans the SKILLS library at C:\\Users\\paulo\\workspace\\SKILLS, matches skills to the current project context, presents applicable options, and applies selected skills.</description>
+  <description>Scans the SKILLS library at C:\\Users\\paulo\\workspace\\dev\\.agents\\skills, matches skills to the current project context, presents applicable options, and applies selected skills — never applies without confirmation.</description>
 </meta>
 
 ## Step 1 — Define Intent
-Determines whether to browse categories, search keyword, apply a named skill, or auto-suggest based on context.
+Determines whether to \`browse\` categories, \`search <term>\`, \`apply <name>\` directly, or \`suggest\` automatically based on project context.
 
 ## Step 2 — Scan and Filter
-Searches the 1000+ local skills and builds a filtered, relevant subset aligned with current stack and task type.
+Scans \`C:\\Users\\paulo\\workspace\\dev\\.agents\\skills\` (including specialized modules like \`behavior-core\`, \`agent-orchestrator\`, \`mcp-orchestrator\`, \`dxe-orchestrator\`, \`finops-cloud-cost\`, \`cloud-multi-tenant-architect\`, \`api-contract-designer\`, and \`chat\`) and builds a filtered subset.
 
 ## Step 3 — Match to Context
-Scores relevance by stack match, architectural pattern, and task goals using Workspace MD as primary source.
+Scores relevance by stack match, architectural pattern, and task goals using \`WORKSPACE.md\` as the primary source of truth.
 
 ## Step 4 — Preview and Apply
-Shows details (requirements, files, compatibility) of selected skill, adapting placeholders and typescript types before delivering blocks.`,
+Reads the full \`SKILL.md\`, presents requirements and generated patterns, and adapts placeholders and TypeScript strictness before delivering ready-to-use blocks.`,
       pt: `# Workflow: /skill
 
 <meta>
   <trigger>/skill</trigger>
-  <description>Varre a biblioteca SKILLS em C:\\Users\\paulo\\workspace\\SKILLS, cruza as habilidades com o contexto do projeto atual, apresenta as opções aplicáveis e aplica as selecionadas.</description>
+  <description>Varre a biblioteca SKILLS em C:\\Users\\paulo\\workspace\\dev\\.agents\\skills, cruza as habilidades com o contexto do projeto atual, apresenta as opções aplicáveis e aplica as selecionadas mediante confirmação.</description>
 </meta>
 
 ## Step 1 — Definir Intenção
-Determina se deseja navegar por categorias, buscar palavras-chave, aplicar uma skill específica ou sugerir automaticamente baseado no contexto.
+Determina se deseja navegar por categorias (\`browse\`), buscar termos (\`search\`), aplicar diretamente (\`apply\`) ou sugerir automaticamente (\`suggest\`) com base no contexto.
 
-## Step 2 — Varrer e Filtrar
-Busca nas mais de 1000 skills locais e constrói uma lista filtrada e relevante alinhada com a stack e o tipo de tarefa atual.
+## Step 2 — Varrer e Filtrar Biblioteca
+Inspeciona \`C:\\Users\\paulo\\workspace\\dev\\.agents\\skills\` (incluindo especialistas como \`behavior-core\`, \`agent-orchestrator\`, \`mcp-orchestrator\`, \`dxe-orchestrator\`, \`finops-cloud-cost\`, \`cloud-multi-tenant-architect\`, \`api-contract-designer\` e \`chat\`) filtrando apenas o subconjunto relevante.
 
 ## Step 3 — Cruzar com o Contexto
-Calcula relevância por compatibilidade de stack, padrão arquitetural e metas da tarefa usando o Workspace MD como guia principal.
+Calcula a relevância por aderência exata à stack, padrão arquitetural e objetivo da tarefa utilizando o \`WORKSPACE.md\` como fonte da verdade.
 
 ## Step 4 — Preview e Aplicação
-Apresenta detalhes (requisitos, arquivos, compatibilidade) da skill selecionada, adaptando variáveis e tipos TypeScript antes de entregar os blocos.`
+Lê o \`SKILL.md\` completo, exibe o preview técnico e adapta placeholders e nível de TypeScript antes de entregar os blocos prontos.`
+    }
+  },
+  {
+    command: '/gate',
+    title: 'Universal Multi-Agent Quality Gate',
+    description: 'Protocolo de Dupla Execução (7 Vertentes Técnicas + Auditoria de Sobriedade & Anti-Overengineering). Bloqueia commits sem status 🟢 PASS, impõe Zero Lockfile Churn e exige PRs sobrios sem superlativos.',
+    type: 'analysis',
+    tags: ['Quality Gate', 'Dual-Execution', 'Anti-Overengineering', 'Release'],
+    content: {
+      en: `# Workflow: /gate
+
+<meta>
+  <trigger>/gate</trigger>
+  <description>Universal Multi-Agent Health Check and Quality Gate. Automatically detects project maturity level (Tier 1 Study/MVP vs Tier 2 Professional/Enterprise) and enforces full-spectrum standards through a Dual-Execution Protocol (7 Technical Verticals + Ruthless Proportionality & Anti-Overengineering Audit).</description>
+</meta>
+
+## Step 1 — Project Maturity & Context Auto-Detection
+Scans repository root and \`WORKSPACE.md\` to classify the project into **Tier 1 (Pragmatic / Study / POC)** or **Tier 2 (Professional / Enterprise — Zero Tolerance)**.
+
+## Step 2 — Execution 1: The Enterprise 7-Vertical Deep Health Check
+Routes inspection across specialized SKILLS to audit all 7 engineering verticals:
+1. **Business Logic, Edge Cases & Clean Architecture**
+2. **HTTP Semantics & API Contracts** (strict 200/201/204/400/401/403/404/409/422 + standardized error payloads)
+3. **Security, Multi-Tenancy (Zero IDOR/BOLA) & LGPD**
+4. **Database, Versioned Migrations & Fixed-Point Numeric Precision**
+5. **Testing, TDD & Regression Proof**
+6. **Frontend, Mobile-First (44px+ Touch Targets) & WCAG AA**
+7. **Atomic Git, Lockfile Integrity (Zero Lockfile Churn) & PR Sobriety**
+
+## Step 3 — Execution 2: Ruthless Sobriety & Anti-Overengineering Audit ("O Agente Chato")
+Second pass with an isolated, skeptical context that evaluates proportionality, cognitive friction on the team, and premature bureaucracy.
+
+## Step 4 — Full-Spectrum Scorecard & Sobriety PR Generator
+Outputs the deterministic Health Check Scorecard (\`🟢 LIBERADO\` | \`🟡 RESSALVAS\` | \`🔴 BLOQUEADO\`) and generates the factual Commit & Pull Request specification (explicitly declaring **What was done** and **What was NOT done** with zero marketing superlatives).`,
+      pt: `# Workflow: /gate
+
+<meta>
+  <trigger>/gate</trigger>
+  <description>Universal Multi-Agent Health Check e Quality Gate. Detecta automaticamente a maturidade do projeto (Tier 1 Estudo/MVP vs Tier 2 Profissional/Enterprise) e aplica inspeção de espectro completo via Protocolo de Dupla Execução (7 Vertentes Técnicas + Auditoria Crítica de Sobriedade & Anti-Overengineering).</description>
+</meta>
+
+## Step 1 — Detecção Automática de Maturidade e Rigor
+Analisa a raiz do repositório e o \`WORKSPACE.md\` para classificar o rigor em **Tier 1 (Pragmático / Estudo / POC)** ou **Tier 2 (Profissional / Enterprise — Tolerância Zero)**.
+
+## Step 2 — Execução 1: Auditoria Técnica nas 7 Vertentes
+Aciona o painel multi-agente de SKILLS para auditar as 7 vertentes fundamentais:
+1. **Lógica de Negócio, Casos de Borda & Clean Architecture**
+2. **Semântica HTTP & Contratos de API** (status codes estritos e erro padronizado)
+3. **Segurança, Isolamento Multi-Tenant (Zero IDOR/BOLA) & LGPD**
+4. **Banco de Dados, Migrations Versionadas & Precisão Decimal**
+5. **Testes, TDD & Prova de Regressão**
+6. **Frontend, Mobile-First (Touch Target >= 44px) & WCAG AA**
+7. **Git Atômico, Integridade de Lockfile (Zero Lockfile Churn) & Sobriedade de PR**
+
+## Step 3 — Execução 2: Auditoria de Sobriedade & Anti-Overengineering ("O Agente Chato")
+Segunda passagem com contexto isolado e olhar 100% cético: avalia se a solução é proporcional ao estágio real do projeto e diagnostica pontos de fricção cognitiva ou burocracia precoce.
+
+## Step 4 — Scorecard Determinístico & Gerador de PR Sóbrio
+Emite o Scorecard Executivo (\`🟢 LIBERADO\` | \`🟡 RESSALVAS\` | \`🔴 BLOQUEADO\`) e gera o template de Commit e Pull Request factual (declarando com honestidade cirúrgica **O que foi feito** e **O que NÃO foi feito**, sem superlativos de marketing).`
+    }
+  },
+  {
+    command: '/po',
+    title: 'Product Management & BDD Specifications',
+    description: 'Orquestração de produto com Ruthless PM Audit: converte objetivos de negócio em escopo MoSCoW aprovado, PRDs completos e User Stories INVEST com critérios BDD testáveis.',
+    type: 'primary',
+    tags: ['Produto', 'PRD', 'BDD', 'MoSCoW'],
+    content: {
+      en: `# Workflow: /po
+
+<meta>
+  <trigger>/po</trigger>
+  <description>Master orchestration engine for Product Management, PRD creation, User Stories with BDD acceptance criteria, and MVP prioritization. Chains problem discovery, persona mapping, MoSCoW scope confirmation, Multi-Agent Ruthless Audit, and engineering handoff.</description>
+</meta>
+
+## Step 1 — Problem & Context Discovery (Product 3-Question Protocol)
+Extracts the core pain point, target persona, and measurable business KPI. Applies the 3-Question Protocol only if critical context cannot be inferred.
+
+## Step 2 — Scope & MoSCoW MVP Proposal (Confirm Always)
+Invokes the \`product-manager\` skill and presents a structured MVP boundary (\`Must Have\`, \`Should Have\`, and explicit \`Won't Have / Out-of-Scope\`) for approval before generating the full PRD.
+
+## Step 3 — Full PRD & INVEST User Stories with BDD
+Generates the complete Product Requirement Document, INVEST User Stories, and Gherkin BDD acceptance criteria (\`Given / When / Then\`) covering happy paths and edge cases.
+
+## Step 4 — Multi-Agent Ruthless PM Audit Gate
+Triggers the **Ruthless PM Auditor** to verify that all BDD criteria are unambiguously testable, Out-of-Scope boundaries prevent scope creep, and KPIs are numeric before delivering with the \`🛡️ Auditado pelo Ruthless PM Auditor: APROVADO\` seal.`,
+      pt: `# Workflow: /po
+
+<meta>
+  <trigger>/po</trigger>
+  <description>Orquestração mestre de Product Management: encadeia descoberta de problema, mapeamento de persona, proposta de escopo MoSCoW (Confirm Always), geração de PRD + User Stories BDD e auditoria implacável via Ruthless PM Auditor.</description>
+</meta>
+
+## Step 1 — Descoberta de Problema & Contexto (Protocolo de 3 Perguntas)
+Extrai a dor central do usuário, a persona-alvo e a métrica primária de sucesso (KPI), aplicando até 3 perguntas objetivas caso o contexto essencial não esteja definido.
+
+## Step 2 — Proposta de Escopo & Fronteira MoSCoW (Confirm Always)
+Aciona a skill \`product-manager\` e declara o plano de MVP (\`Must Have\`, \`Should Have\` e \`Won't Have / Out-of-Scope\`) aguardando aprovação explícita antes de redigir o PRD completo.
+
+## Step 3 — Geração do PRD Completo & User Stories BDD
+Gera o Documento de Requisitos de Produto (PRD), histórias de usuário no padrão INVEST e critérios de aceite BDD (\`Dado que / Quando / Então\`) cobrindo fluxos principais e casos de borda.
+
+## Step 4 — Multi-Agent Ruthless PM Audit Gate ("O Agente Chato")
+Dispara o **Subagente Auditor (Ruthless PM Auditor)** para validar testabilidade sem ambiguidade, delimitação contra scope creep e métricas numéricas antes da entrega com o selo \`🛡️ Auditado pelo Ruthless PM Auditor: APROVADO\`.`
+    }
+  },
+  {
+    command: '/governance',
+    title: 'IT Executive Governance & Cloud FinOps',
+    description: 'Governança executiva de TI apoiada por scripts determinísticos em Python: cálculo exato de SLA/MTTR, rateio Cloud FinOps por unidade, auditoria anti-jargão e renderização HTML via DXE.',
+    type: 'analysis',
+    tags: ['Governança', 'FinOps', 'SLA', 'C-Level', 'Python'],
+    content: {
+      en: `# Workflow: /governance
+
+<meta>
+  <trigger>/governance</trigger>
+  <description>Master orchestration workflow for IT Executive Reporting, SLA auditing, Cloud FinOps cost allocation, and C-Level reporting. Chains Python deterministic calculation scripts, IT governance translation, Multi-Agent Ruthless Audit, and DXE visual HTML generation.</description>
+</meta>
+
+## Step 1 — Data & Metric Ingestion
+Ingests incident logs, cloud billing exports, and operational metrics for the target governance period.
+
+## Step 2 — Script-Augmented Deterministic Calculation
+Executes Python calculation scripts (\`sla_health_checker.py\`, \`finops_calculator.py\`, \`analyze_data.py\`) to compute exact uptime percentages, MTTR, per-unit cost allocation, and Auto Scaling savings without LLM math hallucinations.
+
+## Step 3 — C-Level Translation & Draft Approval (Confirm Always)
+Loads \`it-executive-governance\`, \`finops-cloud-cost\`, and \`data-analyst\` skills to translate technical metrics into C-Level business language and presents the Executive Summary Draft for confirmation.
+
+## Step 4 — Multi-Agent Ruthless Governance Audit & DXE HTML Delivery
+Audits the report for zero untranslated technical jargon and 100% numeric parity with Python outputs, then routes to \`dxe-executive-report\` to render a responsive, print-ready HTML artifact.`,
+      pt: `# Workflow: /governance
+
+<meta>
+  <trigger>/governance</trigger>
+  <description>Orquestração mestre para Relatórios Executivos de TI, auditoria de SLA, alocação de custos Cloud FinOps e comunicação C-Level. Encadeia scripts Python determinísticos, tradução executiva, Multi-Agent Ruthless Audit e geração visual HTML via DXE.</description>
+</meta>
+
+## Step 1 — Ingestão de Dados e Métricas Operacionais
+Identifica logs de incidentes, faturas de nuvem (AWS/GCP/Azure) e volumetria operacional do período avaliado.
+
+## Step 2 — Fase de Cálculo Determinístico via Python
+Executa scripts Python (\`sla_health_checker.py\`, \`finops_calculator.py\`, \`analyze_data.py\`) para calcular com precisão exata o Uptime %, MTTR, rateio por clínica/unidade e economia de Auto Scaling, eliminando alucinações numéricas.
+
+## Step 3 — Tradução C-Level & Aprovação de Rascunho (Confirm Always)
+Carrega as skills \`it-executive-governance\`, \`finops-cloud-cost\` e \`data-analyst\` para traduzir indicadores técnicos em linguagem executiva de negócios e apresenta o rascunho para confirmação.
+
+## Step 4 — Ruthless Governance Audit & Renderização HTML DXE
+Dispara o **Ruthless Governance Auditor** (garantindo zero jargão técnico não traduzido e fidelidade de 100% aos scripts Python) e aciona \`dxe-executive-report\` para entregar o relatório final em HTML responsivo.`
+    }
+  },
+  {
+    command: '/experience',
+    title: 'DXE Visual Architecture & Concept Prototyping',
+    description: 'Orquestrador supremo de Engenharia de Experiência (DXE): roteia entre 8 skills visuais especializadas, aplica padrão Dark Mode Obsidian/Carmesim e valida via Ruthless UX Auditor.',
+    type: 'primary',
+    tags: ['UI/UX', 'DXE', 'Obsidian Dark', 'Pitch Deck', 'HTML'],
+    content: {
+      en: `# Workflow: /experience
+
+<meta>
+  <trigger>/experience</trigger>
+  <description>Master orchestration workflow for UI/UX experience creation, strategic business documents, visual pitch decks, and web interface prototypes. Chains context discovery, SKILL routing, Visual Plan confirmation, and Multi-Agent Ruthless UX Audit.</description>
+</meta>
+
+## Step 1 — Context Discovery & Mandatory Obsidian Identity
+Extracts target audience, primary goal, and output format. Enforces the default signature visual identity: **Dark Mode Obsidian (\`#0c0c0e\`), Graphite (\`#141417\`), Crimson accent (\`#FF2A2A\`), and Space Grotesk / Inter / JetBrains Mono** typography.
+
+## Step 2 — Specialized DXE SKILL Routing
+Routes automatically to the specialized DXE skill in \`C:\\Users\\paulo\\workspace\\dev\\.agents\\skills\`:
+- \`dxe-professional-document\`, \`dxe-commercial-proposal\`, \`dxe-executive-dossier\`, \`dxe-executive-report\`, \`dxe-technical-documentation\`, \`dxe-business-presentation\`, \`dxe-business-case-study\`, or \`dxe-concept-prototyper\`.
+
+## Step 3 — Visual & Structural Plan (Confirm Always)
+Presents the complete UX & Visual Plan (audience, aesthetic tokens, selected visual components, and section structure) and waits for explicit user approval before generating code.
+
+## Step 4 — Cognitive Load Generation & Ruthless UX Audit Gate
+Applies chunking (max 4 lines per text block, benefits before features) and triggers the **Ruthless UX/UI Auditor** to verify WCAG AA contrast, heading hierarchy, and absence of meta-labels before delivering with the \`🟢 Auditado pelo Ruthless UX Auditor: APROVADO\` seal.`,
+      pt: `# Workflow: /experience
+
+<meta>
+  <trigger>/experience</trigger>
+  <description>Orquestração mestre para criação de Experiências UI/UX, documentos estratégicos de negócio, pitch decks visuais e protótipos de interface web. Encadeia descoberta de contexto, roteamento de SKILLS DXE, aprovação de Plano Visual e Multi-Agent Ruthless UX Audit.</description>
+</meta>
+
+## Step 1 — Descoberta de Contexto & Identidade Obsidian Obrigatória
+Extrai público-alvo, objetivo estratégico e formato de saída. Aplica como referência padrão obrigatória a identidade **Dark Mode Obsidian (\`#0c0c0e\`), Graphite (\`#141417\`), acento Carmesim (\`#FF2A2A\`) e tipografia Space Grotesk / Inter / JetBrains Mono**.
+
+## Step 2 — Roteamento para SKILL DXE Especialista
+Seleciona a skill especialista correspondente em \`C:\\Users\\paulo\\workspace\\dev\\.agents\\skills\`:
+- \`dxe-professional-document\`, \`dxe-commercial-proposal\`, \`dxe-executive-dossier\`, \`dxe-executive-report\`, \`dxe-technical-documentation\`, \`dxe-business-presentation\`, \`dxe-business-case-study\` ou \`dxe-concept-prototyper\`.
+
+## Step 3 — Plano Visual & Estrutural (Confirm Always)
+Declara o plano completo de experiência visual e estrutura de blocos para aprovação explícita do usuário antes de gerar qualquer código HTML/CSS.
+
+## Step 4 — Geração com Carga Cognitiva Controlada & Ruthless UX Audit
+Aplica *chunking* (máximo de 4 linhas por bloco, benefícios antes de features) e dispara o **Subagente Auditor (Ruthless UX/UI Auditor)** para validar contraste WCAG AA, hierarquia H1→H2→H3 e ausência de muros de texto antes de entregar com o selo \`🟢 Auditado pelo Ruthless UX Auditor: APROVADO\`.`
+    }
+  },
+  {
+    command: '/prompt',
+    title: 'Prompt Architecture & Absolute Governance Engine',
+    description: 'Motor de governança absoluta e auditoria de PROMPTS e WORKFLOWS: opera com isolamento estrito de escopo, diagnóstico em 5 dimensões, refatoração XML/Guardrails e 5 módulos de stress test.',
+    type: 'action',
+    tags: ['Prompt Engineering', 'Governança Absoluta', 'Meta-Prompting', 'Auditoria'],
+    content: {
+      en: `# Workflow: /prompt
+
+<meta>
+  <trigger>/prompt</trigger>
+  <description>Master orchestration workflow for absolute governance, rigorous structural analysis, objective classification, and technical optimization of PROMPTS and WORKFLOWS. Enforces strict scope isolation, role immutability, multi-dimensional diagnostic evaluation, and cycle closure boundaries.</description>
+</meta>
+
+## Step 1 — Absolute Governance & Structural Discovery
+Operates strictly as an evaluator of PROMPTS and WORKFLOWS (never executes the analyzed prompt or shifts persona). Extracts artifact type, central objective, target LLM, and declared guardrails.
+
+## Step 2 — Specialized SKILLS Cross-Reference & Maturity Classification
+Cross-references against \`prompt-engine\`, \`prompt-engineer\`, and \`llm-prompt-optimizer\`. Classifies maturity into **🔴 Draft**, **🟡 Structured**, or **🟢 Professional**.
+
+## Step 3 — 5-Dimensional Deep Technical Diagnosis
+Delivers a rigorous audit across 5 dimensions:
+1. Structural Diagnosis (delimiters, input/instruction/output separation)
+2. Technical Classification (Role-prompting, Few-Shot, CoT, ReAct, Negative Constraints)
+3. Hidden Assumptions
+4. Strengths
+5. Risk Vectors (injection, ambiguity, cognitive loops, token bloat)
+
+## Step 4 — Unified Strategic Recommendation & Refactored Delivery
+Emits a single primary recommendation (**Maintain**, **Spot Fix**, **Strategic Adjustment**, **Restructure**, or **Modularize**), delivers the optimized artifact ready to copy, offers 5 Advanced Stress-Test Modules, and closes with an isolated cycle marker.`,
+      pt: `# Workflow: /prompt
+
+<meta>
+  <trigger>/prompt</trigger>
+  <description>Orquestração mestre para governança absoluta, análise estrutural rigorosa, classificação objetiva e otimização técnica de PROMPTS e WORKFLOWS. Impõe isolamento estrito de escopo, imutabilidade de papel, diagnóstico em 5 dimensões e marcadores de fechamento de ciclo.</description>
+</meta>
+
+## Step 1 — Protocolo de Governança Absoluta & Identificação
+Opera exclusivamente como avaliador técnico de PROMPTS e WORKFLOWS (jamais executa o prompt analisado ou muda de papel). Extrai tipo do artefato, objetivo central, LLM alvo e estrutura declarada.
+
+## Step 2 — Cruzamento com SKILLS & Classificação de Maturidade
+Cruza o artefato com as skills \`prompt-engine\`, \`prompt-engineer\` e \`llm-prompt-optimizer\`, classificando-o em **🔴 Rascunho**, **🟡 Estruturado** ou **🟢 Profissional**.
+
+## Step 3 — Diagnóstico Técnico Profundo em 5 Dimensões
+Entrega avaliação detalhada cobrindo:
+1. Diagnóstico Estrutural (delimitadores Markdown/XML e separação input/system/output)
+2. Classificação Técnica (Role-based, Few-Shot, CoT, ReAct, Restrições Negativas)
+3. Suposições Ocultas
+4. Pontos Fortes
+5. Pontos de Risco (vetores de injeção/jailbreak, ambiguidade, desperdício de tokens)
+
+## Step 4 — Recomendação Estratégica Única & Refatoração Pronta
+Emite exatamente uma recomendação primária (**Manter**, **Ajuste Pontual**, **Ajuste Estratégico**, **Reestruturação** ou **Modularização**), entrega a versão otimizada pronta para uso, disponibiliza os 5 Módulos Avançados (Stress Test, Trade-offs, Escala, Multi-Perfil, Benchmarking) e encerra o ciclo com isolamento de contexto.`
+    }
+  },
+  {
+    command: '/chat',
+    title: 'High-Precision Scope Analyst & Anti-Ambiguity Filter',
+    description: 'Filtro anti-ambiguidade de alta precisão: detecta termos vagos ou subjetivos, bloqueia gerações precipitadas e formula de 2 a 3 perguntas cirúrgicas para alinhar Objetivo, Restrições e Formato de Saída.',
+    type: 'primary',
+    tags: ['Escopo', 'Anti-Ambiguidade', 'Triagem', 'Clareza'],
+    content: {
+      en: `# Workflow: /chat
+
+<meta>
+  <trigger>/chat</trigger>
+  <description>Acts as a High-Precision Scope Analyst and anti-ambiguity filter, ensuring no project, study, or task starts with vague, subjective, or incomplete requirements.</description>
+  <critical>Execute all steps in exact order. If any gray area exists, BLOCK premature generation of final content and formulate 2 to 3 surgical questions before delivering the result.</critical>
+</meta>
+
+## Step 1 — Role & Context
+Operates as a **High-Precision Scope Analyst** whose primary function is to act as an **anti-ambiguity filter**, preventing wasted iterations caused by underspecified prompts.
+
+## Step 2 — Operational Protocol (Anti-Ambiguity)
+Before processing any final answer, executes three internal checks:
+1. **Ambiguity Detection**: Identifies subjective terms (*"fast"*, *"good"*, *"best"*), missing context (*"write a script"*), or omitted constraints (audience, format, platform).
+2. **Interaction Mode**: If any gray area exists, **BLOCKS** final content generation immediately.
+3. **Scoping Questions**: Formulates **between 2 and 3 surgical multiple-choice questions** focused on extracting **Objective**, **Constraints**, and **Output Format**.
+
+## Step 3 — Standardized Clarification Output
+Presents a structured multiple-choice alignment menu (Options A, B, C) for each surgical question and waits for the user's answers before generating the final deliverable.`,
+      pt: `# Workflow: /chat
+
+<meta>
+  <trigger>/chat</trigger>
+  <description>Atua como um Analista de Escopo de Alta Precisão e filtro anti-ambiguidade, garantindo que nenhum projeto, estudo ou tarefa seja iniciado com requisitos vagos, subjetivos ou incompletos.</description>
+  <critical>Execute todos os passos na ordem exata. Se houver qualquer área cinzenta, BLOQUEIE a geração do conteúdo final e formule entre 2 e 3 perguntas cirúrgicas antes de entregar o resultado.</critical>
+</meta>
+
+## Step 1 — Papel & Contexto
+Atua como um **Analista de Escopo de Alta Precisão**, cuja função central é operar como um **filtro anti-ambiguidade**, impedindo que tarefas ou projetos comecem baseados em suposições.
+
+## Step 2 — Protocolo Operacional (Anti-Ambiguidade)
+Antes de processar qualquer entrega final, executa internamente:
+1. **Detecção de Ambiguidade**: Identifica termos subjetivos (*"rápido"*, *"bom"*, *"melhor"*), falta de contexto (*"fazer um script"*) ou ausência de restrições (público, formato, plataforma).
+2. **Modo de Interação**: Se houver qualquer área cinzenta, **BLOQUEIA** imediatamente a geração precipitada do conteúdo final.
+3. **Perguntas de Escopo**: Formula **exatamente entre 2 e 3 perguntas cirúrgicas** de múltipla escolha focadas em extrair **Objetivo**, **Restrições** e **Formato de Saída**.
+
+## Step 3 — Modelo Padronizado de Alinhamento
+Apresenta um menu objetivo com opções (A, B, C) para cada pergunta cirúrgica e aguarda a confirmação das variáveis críticas antes de entregar o resultado definitivo.`
     }
   }
 ];
+
