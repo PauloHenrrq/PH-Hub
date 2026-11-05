@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import { mcps } from '@/lib/data/mcps';
+import { McpCard } from '@/components/ui/McpCard';
 
 export default function McpsSection() {
   const currentMcps = mcps.slice(0, 3);
@@ -21,36 +22,11 @@ export default function McpsSection() {
 
         <div className="tools-grid">
           {currentMcps.map((mcp, index) => (
-            <a
-              href={mcp.referenceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <McpCard
               key={mcp.id}
-              className="glass-card tool-card"
-              data-reveal="fade-up"
-              data-delay={100 + (index % 3) * 50}
-              style={{ display: 'flex', flexDirection: 'column', textDecoration: 'none' }}
-            >
-              <div className="tool-card-icon" style={{ fontSize: '2.5rem', marginBottom: '8px' }}>
-                {mcp.icon}
-              </div>
-              <span className="tool-tag">{mcp.tag}</span>
-              <h3>{mcp.name}</h3>
-              <p className="tool-desc">{mcp.description}</p>
-              
-              <div className="tool-usage" style={{ marginTop: 'auto', borderTop: 'none', paddingTop: 0 }}>
-                <span 
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: 'var(--purple-400)', fontWeight: 600, textDecoration: 'none' }}
-                >
-                  Documentação e Ref
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                </span>
-              </div>
-            </a>
+              mcp={mcp}
+              delay={100 + (index % 3) * 50}
+            />
           ))}
         </div>
 

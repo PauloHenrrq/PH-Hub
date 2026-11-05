@@ -53,6 +53,27 @@ export function McpCard({ mcp, delay = 0 }: McpCardProps) {
         </h3>
         <p className="tool-desc">{mcp.description}</p>
         
+        {mcp.cliVariant && (
+          <div 
+            style={{
+              marginTop: '12px',
+              marginBottom: '12px',
+              padding: '8px 10px',
+              borderRadius: '8px',
+              background: 'rgba(155, 91, 255, 0.08)',
+              border: '1px solid rgba(155, 91, 255, 0.2)',
+              fontSize: '0.78rem'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600, color: 'var(--purple-300)', marginBottom: '3px' }}>
+              <span>⚡</span> 2ª Opção (Modo Direto):
+            </div>
+            <code style={{ fontSize: '0.74rem', color: '#fff', background: 'rgba(0,0,0,0.3)', padding: '2px 6px', borderRadius: '4px', fontFamily: 'var(--font-mono)' }}>
+              {mcp.cliVariant.command.split('|')[0].trim()}
+            </code>
+          </div>
+        )}
+
         {mcp.detailedContent && (
           <button 
             style={{
@@ -134,6 +155,59 @@ export function McpCard({ mcp, delay = 0 }: McpCardProps) {
               <h4 style={{ color: 'var(--purple-400)', marginBottom: '12px', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600 }}>Visão Geral</h4>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.7 }}>{mcp.detailedContent.overview}</p>
             </div>
+
+            {mcp.cliVariant && (
+              <div style={{
+                marginBottom: '32px',
+                padding: '20px',
+                borderRadius: '12px',
+                background: 'rgba(155, 91, 255, 0.06)',
+                border: '1px solid rgba(155, 91, 255, 0.25)',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
+                  <span style={{
+                    fontSize: '0.75rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1.5px',
+                    fontWeight: 700,
+                    color: 'var(--purple-300)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}>
+                    ⚡ 2ª Opção Melhorada: Modo Direto (Sem MCP)
+                  </span>
+                  <a
+                    href={mcp.cliVariant.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '0.8rem', color: 'var(--purple-400)', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                  >
+                    Doc Oficial ↗
+                  </a>
+                </div>
+                <h4 style={{ color: '#fff', fontSize: '1.1rem', margin: '4px 0 8px', fontWeight: 600 }}>{mcp.cliVariant.name}</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, margin: '0 0 12px' }}>
+                  {mcp.cliVariant.description}
+                </p>
+                <div style={{
+                  background: 'rgba(0, 0, 0, 0.45)',
+                  padding: '10px 14px',
+                  borderRadius: '8px',
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.85rem',
+                  color: 'var(--purple-300)',
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                  marginBottom: '10px',
+                  overflowX: 'auto'
+                }}>
+                  $ {mcp.cliVariant.command}
+                </div>
+                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+                  <strong style={{ color: 'var(--purple-400)' }}>Vantagem:</strong> {mcp.cliVariant.benefit}
+                </div>
+              </div>
+            )}
 
             <div style={{ marginBottom: '32px' }}>
               <h4 style={{ color: 'var(--purple-400)', marginBottom: '12px', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600 }}>Destaques</h4>
